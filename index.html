@@ -225,7 +225,7 @@
           <!-- Two key techniques, Dynamic Masked Degradation (DM-Deg) and Dual-Stream Balancing (DS-Bal), address the challenges of semantic pollution and semantic imbalance, respectively. -->
           In the pipeline, we introduce a technique called <strong>Dynamic Masked Degradation (DM-Deg)</strong>, which transforms the original reference images into randomly degraded versions, dynamically perturbing undesired visual semantics. This approach helps suppress the model's sensitivity to irrelevant visual details while preserving the overall visual context, thereby effectively mitigating <strong>semantic pollution</strong>.
         </p><p>
-          Moreover, 
+          Moreover, we employ <strong>Dual-Stream Balancing (DS-Bal)</strong>, a dual-stream learning paradigm designed for balancing the learning of visual semantics, to tackle the issue of <strong>semantic imbalance</strong>. In this paradigm, the online denoising U-Net performs sample-wise min-max optimization, while the momentum denoising U-Net applies selective preserving regularization. This balanced approach ensures more faithful and accurate personalization of the target concept and component.
         </p>
 
         </div>
@@ -240,7 +240,7 @@
         </p>
         </div>
 
-        <h2 class="title is-3"><span class="methodname">Quantitative Results</h2>
+        <h2 class="title is-3">Quantitative Results</h2>
         <div class="content has-text-justified">
             <img id="method_train" width="100%" src="./images/quant_results.png" alt="quantitative results"/>
   
