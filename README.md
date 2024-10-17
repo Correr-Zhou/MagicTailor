@@ -8,7 +8,7 @@
 [Jinbin Bai](https://noyii.github.io/)<sup>3</sup>,
 [Jiaze Wang](https://jiazewang.com/)<sup>1</sup>,
 [Hao Chen](https://scholar.google.com.hk/citations?user=tT03tysAAAAJ&hl=zh-CN)<sup>1</sup>,
-[Guangyong Chen](https://guangyongchen.github.io/)<sup>4</sup>,
+[Guangyong Chen](https://guangyongchen.github.io/)<sup>4</sup>,<br>
 [Xiaowei Hu](https://xw-hu.github.io/)<sup>5&dagger;</sup>,
 [Pheng-Ann Heng](http://www.cse.cuhk.edu.hk/~pheng/)<sup>1</sup>
 
