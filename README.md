@@ -1,6 +1,6 @@
 # MagicTailor: Component-Controllable Personalization in Text-to-Image Diffusion Models
 
-[![Page](https://img.shields.io/badge/Project-Website-blue?logo=googlechrome&logoColor=white)]([https://disenvisioner.github.io/](https://correr-zhou.github.io/MagicTailor/))
+[![Page](https://img.shields.io/badge/Project-Website-blue?logo=googlechrome&logoColor=white)](https://correr-zhou.github.io/MagicTailor/)
 [![Paper](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/)
 
 [Donghao Zhou](https://scholar.google.com/citations?hl=en&user=RsLS11MAAAAJ)<sup>1*</span></sup>,
