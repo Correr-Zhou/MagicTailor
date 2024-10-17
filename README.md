@@ -20,7 +20,7 @@
 
 <br>
 
-![teaser](assets/teaser.tif)
+![teaser](assets/teaser.gif)
 
 We present **MagicTailor** to enable **component-controllable personalization**, a newly formulated task aiming to reconfigure specific components of concepts during personalization.
 
