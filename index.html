@@ -154,7 +154,7 @@
     <div class="hero-body">
       <img id="teaser" width="100%" src="./images/teaser.jpg" alt="MagicTailor enables component-controllable personalization."/>
       <h2 class="subtitle has-text-centered">
-        <strong>TL;DR:</strong> We propose <span class="methodname" style="font-weight: bold;">MagicTailor</span>, an innovative framework to tackle a newly formulated task called <strong>component-controllable personalization</strong>.
+        We present <span class="methodname" style="font-weight: bold;">MagicTailor</span> to tackle a newly formulated task named <strong>component-controllable personalization</strong>.
       </h2>
     </div>
   </div>
@@ -208,11 +208,9 @@
         <img id="method_train" width="100%" src="./images/challenges.png" alt="challenges"/>
   
         <p>
-          <strong>Major challenges in component-controllable personalization.</strong>
+          <strong>(a) Semantic pollution:</strong> (i) Undesired visual elements may inadvertently disturb the personalized concept. (ii) A simple mask-out strategy is ineffective and causes unintended compositions, whereas (iii) our DM-Deg effectively suppresses unwanted visual semantics, preventing such pollution. 
         </p><p>
-          (a) <strong>Semantic pollution:</strong> (i) Undesired visual elements may inadvertently disturb the personalized concept. (ii) A simple mask-out strategy is ineffective and causes unintended compositions, whereas (iii) our DM-Deg effectively suppresses unwanted visual semantics, preventing such pollution. 
-        </p><p>
-          (b) <strong>Semantic imbalance:</strong> (i) Simultaneously learning the concept and component can lead to imbalance, resulting in concept or component distortion (here we present a case for the former). (ii) Our DS-Bal ensures balanced learning, enhancing personalization performance.
+          <strong>(b) Semantic imbalance:</strong> (i) Simultaneously learning the concept and component can lead to imbalance, resulting in concept or component distortion (here we present a case for the former). (ii) Our DS-Bal ensures balanced learning, enhancing personalization performance.
         </p>
 
         </div>
@@ -224,9 +222,10 @@
         <p>
           Using reference images as the inputs,  <span class="methodname" style="font-weight: bold;">MagicTailor</span> fine-tunes a T2I diffusion model to learn both the target concept and component, enabling the generation of images that seamlessly integrate the component into the concept.
         </p><p>
-          Two key techniques, Dynamic Masked Degradation (DM-Deg) and Dual-Stream Balancing (DS-Bal), address the challenges of semantic pollution and semantic imbalance, respectively.
+          <!-- Two key techniques, Dynamic Masked Degradation (DM-Deg) and Dual-Stream Balancing (DS-Bal), address the challenges of semantic pollution and semantic imbalance, respectively. -->
+          In the pipeline, we introduce a technique called <strong>Dynamic Masked Degradation (DM-Deg)</strong>, which transforms the original reference images into randomly degraded versions, dynamically perturbing undesired visual semantics. This approach helps suppress the model's sensitivity to irrelevant visual details while preserving the overall visual context, thereby effectively mitigating <strong>semantic pollution</strong>.
         </p><p>
-          For clarity, only one image per concept/component is presented and the warm-up stage is not depicted.
+          Moreover, 
         </p>
 
         </div>
@@ -246,17 +245,18 @@
             <img id="method_train" width="100%" src="./images/quant_results.png" alt="quantitative results"/>
   
         <p>
-          We compare our <span class="methodname" style="font-weight: bold;">MagicTailor</span> with SOTA methods of personalization based on automatic metrics and user study.
+          We compare our <span class="methodname" style="font-weight: bold;">MagicTailor</span> with the SOTA methods of personalization based on automatic metrics (CLIP-T, CLIP-I, DINO, and DreamSim) and user study (human preferences on text alignment, identity fidelity, and generation quality).
           The best results are marked in bold.
+          <span class="methodname" style="font-weight: bold;">MagicTailor</span> can achieve superior performance in this challenging task.
         </p>
         </div>
 
-        <h2 class="title is-3">Applications</h2>
+        <h2 class="title is-3">Further Applications</h2>
         <div class="content has-text-justified">
-            <img id="method_train" width="100%" src="./images/applications.png" alt="applications"/>
+            <img id="method_train" width="100%" src="./images/applications.png" alt="further applications"/>
         
         <p>
-          <span class="methodname" style="font-weight: bold;">MagicTailor</span> also show its potential to enable a variety of further applications:
+          <span class="methodname" style="font-weight: bold;">MagicTailor</span> also has the potential to enable a variety of further applications:
         </p><p>
           <strong>(a) Decoupled generation.</strong>  
           <span class="methodname" style="font-weight: bold;">MagicTailor</span> can also separately generate the target concept and component, enriching prospective combinations.
@@ -267,6 +267,9 @@
           <strong>(c) Enhancing other generative tools.</strong> 
           <span class="methodname" style="font-weight: bold;">MagicTailor</span> can conveniently collaborate with a variety of generative tools that focus on other tasks, 
           equipping them with an additional ability to control the concept’s component in their pipelines. 
+        </p>
+        <p class="mt-5">
+          Please refer to our paper and code for more technical details.
         </p>
         </div>
 
@@ -298,7 +301,7 @@
       <!-- <div class="column is-8"> -->
         <div class="content">
           <p>
-            Website template based on
+            The website template is based on
             <a href="https://marigoldmonodepth.github.io/">
               Marigold
             </a>
