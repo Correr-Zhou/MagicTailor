@@ -223,7 +223,7 @@
           Using reference images as the inputs,  <span class="methodname" style="font-weight: bold;">MagicTailor</span> fine-tunes a T2I diffusion model with low-rank adaption (LoRA) to learn both the target concept and component, enabling the generation of images that seamlessly integrate the component into the concept.
         </p><p>
           <!-- Two key techniques, Dynamic Masked Degradation (DM-Deg) and Dual-Stream Balancing (DS-Bal), address the challenges of semantic pollution and semantic imbalance, respectively. -->
-          We introduce <strong>Dynamic Masked Degradation (DM-Deg)</strong> a technique for dynamically perturbing undesired visual semantics. This approach helps suppress the model's sensitivity to irrelevant visual details while preserving the overall visual context, thereby effectively mitigating <strong>semantic pollution</strong>.
+          We introduce <strong>Dynamic Masked Degradation (DM-Deg)</strong>, a novel technique for dynamically perturbing undesired visual semantics. This approach helps suppress the model's sensitivity to irrelevant visual details while preserving the overall visual context, thereby effectively mitigating <strong>semantic pollution</strong>.
         </p><p>
           Moreover, we employ <strong>Dual-Stream Balancing (DS-Bal)</strong>, a dual-stream learning paradigm designed for balancing the learning of visual semantics, to tackle the issue of <strong>semantic imbalance</strong>. The online denoising U-Net performs sample-wise min-max optimization, while the momentum denoising U-Net applies selective preserving regularization, ensuring more faithful personalization.
         </p>
@@ -253,8 +253,9 @@
 
         <h2 class="title is-3">Further Applications</h2>
         <div class="content has-text-justified">
-            <img id="method_train" width="100%" src="./images/applications.png" alt="further applications"/>
-        
+            <img id="method_train" width="100%" src="./images/applications_1.png" alt="further applications"/>
+            <img id="method_train" width="100%" src="./images/applications_2.png" alt="further applications"/>
+    
         <p>
           <span class="methodname" style="font-weight: bold;">MagicTailor</span> also has the potential to enable a variety of further applications:
         </p><p>
