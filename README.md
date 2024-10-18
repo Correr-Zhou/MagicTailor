@@ -1,7 +1,7 @@
 # MagicTailor: Component-Controllable Personalization in Text-to-Image Diffusion Models
 
 [![Page](https://img.shields.io/badge/Project-Page-blue?logo=googlechrome&logoColor=white)](https://correr-zhou.github.io/MagicTailor/)
-[![Paper](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/)
+[![Paper](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2410.13370)
 
 [Donghao Zhou](https://scholar.google.com/citations?hl=en&user=RsLS11MAAAAJ)<sup>1*</span></sup>,
 [Jiancheng Huang](https://huangjch526.github.io/)<sup>2*</span></sup>,
@@ -26,4 +26,15 @@ We present **MagicTailor** to enable **component-controllable personalization**,
 
 
 ## 🔥 Updates
-- 2024.10: [Our paper](https://arxiv.org/) is available. The code is coming soon!
+- 2024.10: [Our paper](https://arxiv.org/pdf/2410.13370) is available. The code is coming soon!
+
+## 📑 Citation
+If you find that our work is helpful in your research, please consider citing our paper:
+```latex
+@article{zhou2024magictailor,
+  title={MagicTailor: Component-Controllable Personalization in Text-to-Image Diffusion Models},
+  author={Zhou, Donghao and Huang, Jiancheng and Bai, Jinbin and Wang, Jiaze and Chen, Hao and Chen, Guangyong and Hu, Xiaowei and Heng, Pheng-Ann},
+  journal={arXiv preprint arXiv:2410.13370},
+  year={2024}
+} 
+```
