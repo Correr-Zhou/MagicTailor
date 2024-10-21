@@ -39,3 +39,10 @@ If you find that our work is helpful in your research, please consider citing ou
   year={2024}
 } 
 ```
+
+<p align="center">
+  <a href="https://star-history.com/#Correr-Zhou/MagicTailor&Date">
+    <img src="https://api.star-history.com/svg?repos=Correr-Zhou/MagicTailor&type=Date" alt="Star History Chart">
+  </a>
+</p>
+
