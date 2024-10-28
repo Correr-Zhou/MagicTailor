@@ -40,16 +40,11 @@ class MagicTailorInference:
         )
         parser.add_argument("--model_path", type=str, required=True)
         parser.add_argument("--prompt", type=str, required=True)
-        parser.add_argument("--output_path", type=str)
+        parser.add_argument("--output_path", type=str, required=True)
         parser.add_argument("--device", type=str, default="cuda")
         self.args = parser.parse_args()
 
     def _load_pipeline(self):
-        self.pipeline = DiffusionPipeline.from_pretrained(
-            self.args.pretrained_model_name_or_path,
-            torch_dtype=torch.float16,
-        )
-
         self.pipeline = DiffusionPipeline.from_pretrained(
             self.args.pretrained_model_name_or_path,   
             torch_dtype=torch.float16,
@@ -73,12 +68,19 @@ class MagicTailorInference:
             clip_sample=False,
             set_alpha_to_one=False,
         )
+        self.num_inference_steps = 50
+        self.guidance_scale = 7.5
 
+        self.pipeline.enable_vae_slicing()
         self.pipeline.to(self.args.device)
 
     @torch.no_grad()
     def infer_and_save(self, prompts):
-        images = self.pipeline(prompts).images
+        images = self.pipeline(
+            prompts,
+            num_inference_steps=self.num_inference_steps,
+            guidance_scale=self.guidance_scale,
+        ).images
         if not self.args.output_path:
             self.args.output_path = os.path.join(self.args.model_path, "inference/result.jpg")
         os.makedirs(os.path.dirname(self.args.output_path), exist_ok=True)
