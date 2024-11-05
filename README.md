@@ -1,9 +1,10 @@
 # MagicTailor: Component-Controllable Personalization in Text-to-Image Diffusion Models
 
-[![Page](https://img.shields.io/badge/Project-Page-blue?logo=github&logoColor=white)](https://correr-zhou.github.io/MagicTailor/)
+[![Page](https://img.shields.io/badge/Project-Page-green?logo=github&logoColor=white)](https://correr-zhou.github.io/MagicTailor/)
 [![Paper](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2410.13370)
 [![Hugging Face](https://img.shields.io/badge/Hugging_Face-%233_Paper_of_the_Day-yellow?logo=huggingface&logoColor=white)](https://huggingface.co/papers?date=2024-10-21)
 [![News](https://img.shields.io/badge/Neuronad-News-980e5a?logo=googlechrome&logoColor=white)](https://neuronad.com/ai-news/tech/magictailor-personalization-in-text-to-image-generation/)
+[![Video](https://img.shields.io/badge/@ManuAGI01-Video-blue?logo=X&logoColor=white)](https://x.com/ManuAGI01/status/1850923512598516046)
 
 [Donghao Zhou](https://scholar.google.com/citations?hl=en&user=RsLS11MAAAAJ)<sup>1*</span></sup>,
 [Jiancheng Huang](https://huangjch526.github.io/)<sup>2*</span></sup>,
