@@ -52,14 +52,14 @@ pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 --extra-index-url http
 cd {PATH-TO-THIS-CODE}
 git clone https://github.com/IDEA-Research/Grounded-Segment-Anything.git
 ```
-4. Follow the section of ["Install without Docker"](https://github.com/IDEA-Research/Grounded-Segment-Anything) to setup Grounded-SAM (please make sure that the CUDA version used for the installation here is the same as that of PyTorch).
+4. Follow the section of ["Install without Docker"](https://github.com/IDEA-Research/Grounded-Segment-Anything) to set up Grounded-SAM (please make sure that the CUDA version used for the installation here is the same as that of PyTorch).
 
 > ❗You can skip Step 3 and 4 if you just want to have a quick try using the example images we provide.
 
 ## 🔬 Training and Inference
 
 ### Preparing Data
-Directly use the example images in `./examples`, or you can prepare your own data:
+Directly use the example images in `./examples`, or you can prepare your own pair:
 1. Create a folder named `{CONCEPT}_{ID}+{COMPONENT}_{ID}`, where `{CONCEPT}` and `{COMPONENT}` are the category names for the concept and component respectively, and `{ID}` is the customized index (you can set it to whatever you want) that helps you distinguish.
 2. Put the reference images into this folder, and rename them as `0_{CONCEPT}_{ID}.jpg` and `1_{COMPONENT}_{ID}.jpg` for the images of the concept and component respectively.
 3. Finally, the data will be organized like:
@@ -84,7 +84,7 @@ python train.py --instance_data_dir examples/person_k+hair_c
 ```
 > ❗Please check the quality of the masks output by Grounded-SAM to ensure that the model runs correctly.
 
-Alternatively, you can also train it with customized hyperparameters, just like:
+Alternatively, you can also train it with customized hyperparameters, such as:
 ```
 python train.py 
     --instance_data_dir examples/person_k+hair_c \
@@ -100,18 +100,22 @@ python train.py
 You can refer to [our paper](https://arxiv.org/pdf/2410.13370) or `train.py` to understand the meaning of the arguments.
 Adjusting these hyperparameters helps yield better results.
 
-Moreover, we also provide a detailed training script in `scripts/train.sh` for reserach or development purpose, supporting further modfication.
+Moreover, we also provide a detailed training script in `scripts/train.sh` for research or development purposes, supporting further modification.
 
 ### Inference
-After training, a model will be saved in `outputs/magictailor`. Placeholder tokens `<v0>` and `<v1>` will be assigned to the concept and componet respectively for text-to-image geneartion.
+After training, a model will be saved in `outputs/magictailor`. Placeholder tokens `<v0>` and `<v1>` will be assigned to the concept and component respectively for text-to-image generation.
 
-Then, you can genearte images with the saved model, just like:
+Then, you can generate images with the saved model, just like:
 ```
 python inference.py \
   --model_path "outputs/magictailor" \
-  --prompt "<v0> with <v1>, on the beach" \
+  --prompt "<v0> with <v1>" \
   --output_path "outputs/inference/result.jpg"
 ```
+
+## 💡 Usage tips
+1. If you face the GPU memory limit, please consider reducing the number of reference images or moving the momentum denoising U-Net (self.unet_m) to another GPU if applicable (see the corresponding code in `train.py`).
+2. While our default hyperparameters are suitable in most cases, further adjustment of hyperparameters for a training pair is still recommended, which helps to achieve a better trade-off between text alignment and identity fidelity.
 
 
 ## 📑 Citation
