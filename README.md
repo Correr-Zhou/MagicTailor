@@ -6,7 +6,7 @@
 [![News](https://img.shields.io/badge/Neuronad-News-980e5a?logo=googlechrome&logoColor=white)](https://neuronad.com/ai-news/tech/magictailor-personalization-in-text-to-image-generation/)
 [![Video](https://img.shields.io/badge/@ManuAGI01-Video-blue?logo=X&logoColor=white)](https://x.com/ManuAGI01/status/1850923512598516046)
 
-[Donghao Zhou](https://scholar.google.com/citations?hl=en&user=RsLS11MAAAAJ)<sup>1*</span></sup>,
+[Donghao Zhou](https://correr-zhou.github.io/)<sup>1*</span></sup>,
 [Jiancheng Huang](https://huangjch526.github.io/)<sup>2*</span></sup>,
 [Jinbin Bai](https://noyii.github.io/)<sup>3</sup>,
 [Jiaze Wang](https://jiazewang.com/)<sup>1</sup>,
