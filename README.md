@@ -1,3 +1,5 @@
+
+
 # MagicTailor: Component-Controllable Personalization in Text-to-Image Diffusion Models
 
 [![Page](https://img.shields.io/badge/Project-Page-green?logo=github&logoColor=white)](https://correr-zhou.github.io/MagicTailor/)
@@ -41,7 +43,7 @@ We present **MagicTailor** to enable **component-controllable personalization**,
 ## 🛠️ Installation
 1. Install the conda environment:
 ```
-conda env create -f environment.yml
+conda env create -f enviroment.yml
 ```
 2. Install other dependencies (here we take CUDA 11.6 as an example):
 ```
