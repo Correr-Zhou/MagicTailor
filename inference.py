@@ -52,7 +52,7 @@ class MagicTailorInference:
         self.pipeline.load_lora_weights(self.args.model_path)
 
         token_embedding_path = os.path.join(self.args.model_path, 'token_embedding.pth')
-        token_embedding_state_dict = torch.load(token_embedding_path)
+        token_embedding_state_dict = torch.load(token_embedding_path, weights_only=True)
         self.pipeline.text_encoder.get_input_embeddings().weight.data = \
             token_embedding_state_dict['weight'].type(torch.float16)
 
